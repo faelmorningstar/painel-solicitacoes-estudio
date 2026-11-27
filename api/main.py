@@ -6,6 +6,7 @@ from typing import Annotated, Literal
 from uuid import uuid4
 
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, StringConstraints
 
 Status = Literal["aberto", "concluido"]
@@ -88,3 +89,13 @@ def atualizar(id: str, alteracao: AlteracaoStatus):
     with closing(conectar()) as banco, banco:
         banco.execute("UPDATE solicitacoes SET status = ? WHERE id = ?", (alteracao.status, id))
         return buscar(banco, id)
+
+
+@app.get("/healthz", include_in_schema=False)
+def saude():
+    return {"status": "ok"}
+
+
+diretorio_painel = os.environ.get("SOLICITACOES_WEB_DIR")
+if diretorio_painel:
+    app.mount("/", StaticFiles(directory=diretorio_painel, html=True), name="painel")

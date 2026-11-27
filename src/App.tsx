@@ -92,6 +92,7 @@ export function App() {
         />
       ) : (
         <>
+          <p className="aviso-demo">Demonstração pública. Use somente dados fictícios.</p>
           <FormularioSolicitacao
             onCriar={async (titulo) => {
               setMensagemFila('')

@@ -137,3 +137,8 @@ button {
 .erro-campo {
   color: #9b251c;
 }
+
+.aviso-demo {
+  margin: 0;
+  color: #496057;
+}

@@ -77,3 +77,22 @@ muda o status nos detalhes e verifica a saída de **Abertas** e a entrada em
 **Concluídas** sem navegação da página. Uma recarga feita depois verifica a
 persistência. O GitHub Actions roda o mesmo cenário em Chromium e Firefox
 nos pull requests para `main`.
+
+## Publicação
+\n[Storybook publicado](https://storybook-painel-solicitacoes-estudio.rafaelsa50.chatgpt.site)
+
+O contêiner compila o React e serve a interface e a API FastAPI no mesmo
+endereço. Na implantação gratuita do Render, o SQLite preserva as alterações
+entre recargas da página. Reiniciar o serviço ou fazer um novo deploy pode
+apagar os dados por causa do disco efêmero. Use somente dados fictícios na demo.
+
+[Publicar o painel no Render](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2Ffaelmorningstar%2Fpainel-solicitacoes-estudio%2Ftree%2Ffeat%2Ffila-storybook)
+
+### Demonstração em dois minutos
+
+1. No painel, crie um pedido de revisão da animação da página inicial.
+2. Abra os detalhes, marque como **Concluído** e volte à fila. Confira o pedido
+   em **Concluídas** e recarregue a página para confirmar a persistência.
+3. No Storybook, compare o cartão aberto e o concluído e mostre o campo com erro.
+4. Abra o [PR #1](https://github.com/faelmorningstar/painel-solicitacoes-estudio/pull/1)
+   e mostre as verificações em Chromium e Firefox.
