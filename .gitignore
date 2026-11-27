@@ -5,3 +5,7 @@ storybook-static/
 .env
 .env.*
 !.env.example
+
+/api/*.db*
+__pycache__/
+.venv/
