@@ -16,7 +16,7 @@ body {
 }
 
 .fila h1 {
-  margin-block: 0 1.5rem;
+  margin-block: 0;
   font-size: clamp(1.75rem, 5vw, 2.5rem);
   line-height: 1.2;
 }
@@ -50,4 +50,90 @@ body {
 .solicitacao-status[data-status='concluido'] {
   color: #164a31;
   background: #dcefe4;
+}
+
+.fila {
+  display: grid;
+  gap: 1rem;
+}
+
+.formulario,
+.campo-texto,
+.lista-solicitacoes {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.formulario h2,
+.campo-texto p,
+.mensagem-fila {
+  margin: 0;
+}
+
+.mensagem-fila:empty {
+  margin-block-end: -1rem;
+}
+
+.lista-solicitacoes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filtro-status {
+  margin: 0;
+  min-inline-size: 0;
+  border: 1px solid #879990;
+  border-radius: 0.5rem;
+}
+
+.filtro-opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filtro-opcoes label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 2rem;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+.campo-texto input,
+.campo-texto select {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #52665d;
+  border-radius: 0.4rem;
+  color: #1d2925;
+  background: #fff;
+}
+
+button {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.solicitacao-card button {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+:focus-visible {
+  outline: 3px solid #164fa0;
+  outline-offset: 3px;
+}
+
+.erro-campo {
+  color: #9b251c;
 }

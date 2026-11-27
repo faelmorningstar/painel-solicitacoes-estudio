@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 import { tituloSolicitacaoExemplo } from '../solicitacao-exemplo'
 import { SolicitacaoCard } from './SolicitacaoCard'
 
@@ -19,4 +20,9 @@ export const Aberto: Story = {
 export const Concluido: Story = {
   name: 'Concluído',
   args: { status: 'concluido' },
+}
+
+export const ComAcao: Story = {
+  name: 'Com ação',
+  args: { status: 'aberto', onAbrir: fn() },
 }

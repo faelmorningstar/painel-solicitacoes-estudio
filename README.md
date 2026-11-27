@@ -29,3 +29,15 @@ Para verificar as compilações, execute `npm run build` e `npm run build-storyb
 O cartão recebe o status por prop. Assim, a fila pode fornecer os dados da API
 quando ela for integrada, e cada história pode reproduzir um estado isolado.
 O status aparece em texto para que a cor seja apenas um reforço visual.
+
+## Fluxo local
+
+Na fila, crie uma solicitação com um título. Use os filtros **Todas**,
+**Abertas** e **Concluídas** para encontrar um pedido. Abra os detalhes, altere
+o status e volte à fila. Nesta etapa, as alterações ficam em memória e são
+descartadas ao recarregar a página.
+
+O Storybook inclui exemplos do campo de texto, do filtro e do cartão.
+Abra a aba **Accessibility** para inspecionar os resultados do axe-core.
+O filtro usa rádios nativos e permite mudar a seleção com as setas.
+O erro de título fica associado ao campo por `aria-describedby`.
