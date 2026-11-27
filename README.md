@@ -59,3 +59,21 @@ fica no React e é aplicado à lista em memória. Após uma gravação bem-suced
 a resposta da API atualiza os caches existentes e a fila é invalidada para
 buscar a versão mais recente. As leituras anteriores são canceladas antes da
 atualização para evitar que uma resposta atrasada sobrescreva o status salvo.
+
+## Teste de ponta a ponta
+
+Com as dependências do Node e do Python instaladas, execute na raiz. No Windows,
+se o FastAPI foi instalado em `.venv`, ative esse ambiente no terminal antes de
+rodar o teste.
+
+```powershell
+npx playwright install chromium firefox
+npm run test:e2e
+```
+
+O Playwright inicia o painel e a API com um banco SQLite temporário.
+Deixe livres as portas 4173 e 8000. O teste cria um pedido pelo formulário,
+muda o status nos detalhes e verifica a saída de **Abertas** e a entrada em
+**Concluídas** sem navegação da página. Uma recarga feita depois verifica a
+persistência. O GitHub Actions roda o mesmo cenário em Chromium e Firefox
+nos pull requests para `main`.
