@@ -1,0 +1,14 @@
+node_modules/
+dist/
+storybook-static/
+*.log
+.env
+.env.*
+!.env.example
+
+/api/*.db*
+__pycache__/
+.venv/
+
+/test-results/
+/playwright-report/

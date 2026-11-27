@@ -1,0 +1,144 @@
+:root {
+  color: #1d2925;
+  background: #f3f6f4;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+.fila {
+  max-width: 46rem;
+  margin-inline: auto;
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+.fila h1 {
+  margin-block: 0;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.solicitacao-card {
+  box-sizing: border-box;
+  max-width: 46rem;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  border: 1px solid #cbd5d0;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.solicitacao-card h2 {
+  margin-block: 0 0.75rem;
+  font-size: 1.125rem;
+  overflow-wrap: anywhere;
+}
+
+.solicitacao-status {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.5rem;
+  color: #5c3b0a;
+  background: #faecd1;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.solicitacao-status[data-status='concluido'] {
+  color: #164a31;
+  background: #dcefe4;
+}
+
+.fila {
+  display: grid;
+  gap: 1rem;
+}
+
+.formulario,
+.campo-texto,
+.lista-solicitacoes {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.formulario h2,
+.campo-texto p,
+.mensagem-fila {
+  margin: 0;
+}
+
+.mensagem-fila:empty {
+  margin-block-end: -1rem;
+}
+
+.lista-solicitacoes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filtro-status {
+  margin: 0;
+  min-inline-size: 0;
+  border: 1px solid #879990;
+  border-radius: 0.5rem;
+}
+
+.filtro-opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filtro-opcoes label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 2rem;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+.campo-texto input,
+.campo-texto select {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #52665d;
+  border-radius: 0.4rem;
+  color: #1d2925;
+  background: #fff;
+}
+
+button {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.solicitacao-card button {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+:focus-visible {
+  outline: 3px solid #164fa0;
+  outline-offset: 3px;
+}
+
+.erro-campo {
+  color: #9b251c;
+}
+
+.aviso-demo {
+  margin: 0;
+  color: #496057;
+}

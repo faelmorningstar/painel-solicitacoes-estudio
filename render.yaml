@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: painel-solicitacoes-estudio
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    autoDeployTrigger: off
